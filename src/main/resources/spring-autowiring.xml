@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+       default-autowire="constructor">
+
+    <!--对应的byName和byType使用的是bean中配置的id和class，并且在自动装配的的时候使用的是类中属性对应的set方法，使用constructor属性时在自动装配的时候使用的是对应类中的构造器-->
+    <!--使用byName时需要注意对应的成员变量名称需要和定义的id属性一致，不然无法装配-->
+    <!--constructor使用的是对应class属性-->
+    <bean id="autoWiringService" class="com.joshua.spring.autowiring.AutoWiringService"></bean>
+    <bean id="autoWiringDAO" class="com.joshua.spring.autowiring.AutoWiringDAO"></bean>
+</beans>
